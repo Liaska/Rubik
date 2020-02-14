@@ -6,10 +6,12 @@ void function main(root = document.body) {
 	root.appendChild(renderer.domElement);
 
 	const scene = new THREE.Scene();
-	scene.background = new THREE.Color();
+	const textureCube=new THREE.CubeTextureLoader().setPath("images/meme/").load(["lf.jpg","rt.jpg","up.jpg","dn.jpg","ft.jpg","bk.jpg"]);
+
+	scene.background = textureCube;
 	window.scene = scene;
 
-	const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000);
+	const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 20000);
 	camera.position.set(250, 400, 250);
 
 	const orbit = new THREE.OrbitControls(camera);
