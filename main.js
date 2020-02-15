@@ -6,7 +6,7 @@ void function main(root = document.body) {
 	root.appendChild(renderer.domElement);
 
 	const scene = new THREE.Scene();
-	const textureCube=new THREE.CubeTextureLoader().setPath("images/meme/").load(["lf.jpg","rt.jpg","up.jpg","dn.jpg","ft.jpg","bk.jpg"]);
+	const textureCube=new THREE.CubeTextureLoader().setPath("images/meme/").load(["lf.jpg","rt.jpg","up.jpg","dn.jpg","ft.jpg","lf.jpg"]);
 
 	scene.background = textureCube;
 	window.scene = scene;
